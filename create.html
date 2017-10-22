@@ -1,0 +1,41 @@
+<html>
+	<body>
+	 
+
+		<form action="create.php" method="POST">
+
+			<div> 
+				<p> Sentences (use "|" as a placeholder) </p>
+				<textarea name="sentences" cols="70" rows="15"></textarea>
+			</div>
+			
+			<div> 
+				<p>Items to insert into placeholders</p>
+				<textarea name="items" cols="30" rows="15"></textarea>
+			</div>
+
+			<p>
+				URL Seed (max 10 characters):
+				<input name="file" maxlength="10"></input>
+				<input type="submit" value="Create" />
+			</p>
+
+		</form>
+
+		<p>Note: Using the same seed as another URL will overwrite the previous one.</p>
+		 
+		<script type="text/javascript">
+		 
+			 // ucs-2 string to base64 encoded ascii
+			 function utoa(str) {
+				return window.btoa(unescape(encodeURIComponent(str)));
+			}
+			// base64 encoded ascii to ucs-2 string
+			function atou(str) {
+				return decodeURIComponent(escape(window.atob(str)));
+			}
+
+		</script>
+	 
+	</body>
+</html>
